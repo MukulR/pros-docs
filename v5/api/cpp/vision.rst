@@ -581,7 +581,7 @@ reached:
 
         void opcontrol() {
           pros::Vision vision_sensor (VISION_PORT);
-          vision_object_s_t object_arr[NUM_VISION_OBJECTS];
+          pros::vision_object_s_t object_arr[NUM_VISION_OBJECTS];
           while (true) {
             vision_sensor.read_by_sig(0, EXAMPLE_SIG, NUM_VISION_OBJECTS, object_arr);
             std::cout << "sig: " << object_arr[0].signature;
